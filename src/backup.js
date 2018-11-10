@@ -1,0 +1,72 @@
+<Slider
+  label="blur"
+  value={this.state.filters.blur}
+  handleChange={this.handleChange}
+  min="0"
+  max="10"
+  unit="px"
+/>
+<Slider
+  label="brightness"
+  value={this.state.filters.brightness}
+  handleChange={this.handleChange}
+  min="0"
+  max="200"
+  unit="%"
+/>
+<Slider
+  label="contrast"
+  value={this.state.filters.contrast}
+  handleChange={this.handleChange}
+  min="0"
+  max="200"
+  unit="%"
+/>
+<Slider
+  label="grayscale"
+  value={this.state.filters.grayscale}
+  handleChange={this.handleChange}
+  min="0"
+  max="100"
+  unit="%"
+/>
+<Slider
+  label="hueRotate"
+  value={this.state.filters.hueRotate}
+  handleChange={this.handleChange}
+  min="0"
+  max="360"
+  unit="deg"
+/>
+<Slider
+  label="invert"
+  value={this.state.filters.invert}
+  handleChange={this.handleChange}
+  min="0"
+  max="100"
+  unit="%"
+/>
+<Slider
+  label="opacity"
+  value={this.state.filters.opacity}
+  handleChange={this.handleChange}
+  min="0"
+  max="100"
+  unit="%"
+/>
+<Slider
+  label="saturate"
+  value={this.state.filters.saturate}
+  handleChange={this.handleChange}
+  min="0"
+  max="200"
+  unit="%"
+/>
+<Slider
+  label="sepia"
+  value={this.state.filters.sepia}
+  handleChange={this.handleChange}
+  min="0"
+  max="100"
+  unit="%"
+/>

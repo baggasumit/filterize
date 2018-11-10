@@ -1,0 +1,245 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+:root {
+  --primary: rgb(61, 7, 117);
+  --primary-light: rgba(61, 10, 117, 0.2);
+  --secondary: #00b09f;
+  --secondary-focus: #00bfa6;
+  --secondary-light: #f7f8f8;
+}
+
+figure {
+  margin-left: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #333;
+  /* height: 100vh; */
+  /* display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'header header'
+    'image filters'
+    'presets filters';
+  grid-gap: 1.5rem;
+  justify-items: center; */
+}
+
+.slider > label {
+  text-transform: capitalize;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.5rem;
+}
+
+header img {
+  width: 40px;
+  margin: 0 2rem;
+}
+
+h1 {
+  color: #fff;
+  margin: 0 2rem;
+  padding: 1rem 0;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: auto 400px;
+  grid-template-rows: auto 200px;
+  grid-template-areas:
+    'image filters'
+    'presets filters';
+  grid-gap: 1.5rem;
+  justify-items: center;
+  /* padding-top: 2rem; */
+  /* height: calc(100vh - 69px); */
+}
+
+.image {
+  margin-left: 2rem;
+  padding-top: 2rem;
+  grid-area: image;
+  /* height: calc(100vh - 269px); */
+}
+
+.image figure {
+  /* height: 400px; */
+  max-width: 70%;
+}
+
+/* .image img {
+  width: auto;
+  height: 100%;
+} */
+
+img {
+  /* border-radius: 0.25rem; */
+  width: 100%;
+}
+
+/* img:before,
+img:after {
+  border-radius: 0.25rem;
+} */
+
+.filters {
+  width: 100%;
+  background-color: var(--secondary-light);
+  padding: 2rem 2rem;
+  grid-area: filters;
+}
+
+.slider {
+  align-items: center;
+  background-color: var(--secondary-light);
+  border-radius: 0.25rem;
+  display: flex;
+  margin: 1.5rem 0;
+  /* padding: 0.5rem 1rem; */
+  width: 90%;
+}
+
+.slider > label {
+  text-align: left;
+  flex: 1 1 30%;
+}
+
+.slider > input {
+  flex: 3 1 50%;
+}
+
+.slider > span {
+  flex: 1 1 20%;
+  text-align: right;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  background: var(--secondary);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+  background: var(--secondary-focus);
+}
+
+button:focus {
+  outline: none;
+  /* outline: 1px solid #fff; */
+  /* outline-offset: -4px; */
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.imageOptions {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+input[type='file'] {
+  display: none;
+}
+
+.custom-file-upload {
+  /* border: 1px solid #7101d6; */
+  background-color: var(--secondary);
+  border-radius: 0.25rem;
+  color: #fff;
+  cursor: pointer;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  width: 10rem;
+}
+
+.custom-file-upload::before {
+  content: '⇧ ';
+}
+
+.custom-file-upload:hover,
+.custom-file-upload:focus {
+  background-color: var(--secondary-focus);
+}
+
+.presets {
+  display: flex;
+  /* flex-wrap: wrap; */
+  margin-left: 2rem;
+  overflow-x: auto;
+  justify-self: stretch; /* default - overrides justify-items: center; on parent */
+  grid-area: presets;
+  padding-bottom: 1rem;
+}
+
+.presets::-webkit-scrollbar {
+  display: none;
+}
+
+.preset {
+  min-width: 200px;
+  text-align: center;
+  font-style: italic;
+  border-radius: 0.25rem;
+}
+
+.preset:hover {
+  cursor: pointer;
+}
+
+.preset.selected {
+  border: 1px solid var(--primary-light);
+}
+
+.preset figure {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.preset img {
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  /* position: fixed;
+  bottom: 0; */
+  padding: 0.25rem;
+  width: 100%;
+  text-align: center;
+}
