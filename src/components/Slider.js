@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Slider(props) {
   const label = props.label === 'hueRotate' ? 'Hue Rotate' : props.label;
@@ -20,5 +21,14 @@ function Slider(props) {
     </div>
   );
 }
+
+Slider.propTypes = {
+  label: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  min: PropTypes.string.isRequired,
+  max: PropTypes.string.isRequired,
+  unit: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
+};
 
 export default Slider;

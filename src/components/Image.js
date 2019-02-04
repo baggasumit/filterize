@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-// import nin from './images/Nin.JPG';
 import filterDetails from '../filterDetails';
 import ImageUpload from './ImageUpload';
 
@@ -83,5 +83,14 @@ class Image extends React.Component {
     );
   }
 }
+
+Image.propTypes = {
+  filters: PropTypes.object.isRequired,
+  imageSource: PropTypes.string.isRequired,
+  updateImageSource: PropTypes.func.isRequired,
+  mouseEnter: PropTypes.func.isRequired,
+  mouseLeave: PropTypes.func.isRequired,
+  preset: PropTypes.string,
+};
 
 export default Image;

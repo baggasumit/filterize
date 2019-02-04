@@ -1,7 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import tree from '../images/Tree.jpg';
-// import nin from './images/Nin.JPG';
-// import filterDetails from '../filterDetails';
 import presetFilters from '../presets';
 
 class Presets extends React.Component {
@@ -38,5 +37,11 @@ class Presets extends React.Component {
     );
   }
 }
+
+Presets.propTypes = {
+  imageSource: PropTypes.string.isRequired,
+  onSelectPreset: PropTypes.func.isRequired,
+  selectedPreset: PropTypes.string,
+};
 
 export default Presets;

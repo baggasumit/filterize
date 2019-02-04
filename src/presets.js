@@ -14,6 +14,7 @@ const presetFilters = {
       color: { a: 0.3, b: 188, g: 106, r: 243 },
     },
   },
+
   aden: {
     filter: {
       hueRotate: '20',
@@ -36,6 +37,7 @@ const presetFilters = {
       },
     },
   },
+
   amaro: {
     filter: {
       hueRotate: '-10',
@@ -48,6 +50,7 @@ const presetFilters = {
       type: 'none',
     },
   },
+
   brannan: {
     filter: {
       sepia: '50',
@@ -60,6 +63,7 @@ const presetFilters = {
       color: { a: 0.31, b: 199, g: 44, r: 161 },
     },
   },
+
   brooklyn: {
     filter: {
       contrast: '90',
@@ -81,6 +85,7 @@ const presetFilters = {
       },
     },
   },
+
   clarendon: {
     filter: {
       contrast: '120',
@@ -112,6 +117,7 @@ const presetFilters = {
       },
     },
   },
+
   gingham: {
     filter: {
       brightness: '105',
@@ -132,25 +138,7 @@ const presetFilters = {
       },
     },
   },
-  // earlybird: {
-  //   filter: {
-  //     contrast: '90',
-  //     sepia: '20',
-  //     blend: 'overlay',
-  //     opacity: '100',
-  //   },
-  //   overlay: {
-  //     type: 'radial',
-  //     color1: {
-  //       color: { a: 1, b: 142, g: 186, r: 208 },
-  //       stop: 20,
-  //     },
-  //     color2: {
-  //       color: { a: 0.2, b: 16, g: 2, r: 29 },
-  //       stop: 100,
-  //     },
-  //   },
-  // },
+
   hudson: {
     filter: {
       brightness: '120',
@@ -171,6 +159,7 @@ const presetFilters = {
       },
     },
   },
+
   inkwell: {
     filter: {
       sepia: '30',
@@ -184,6 +173,7 @@ const presetFilters = {
       color: { a: 0, b: 0, g: 0, r: 0 },
     },
   },
+
   lofi: {
     filter: {
       saturate: '110',
@@ -203,6 +193,7 @@ const presetFilters = {
       },
     },
   },
+
   maven: {
     filter: {
       sepia: '25',
@@ -217,6 +208,7 @@ const presetFilters = {
       color: { a: 0.2, b: 26, g: 230, r: 3 },
     },
   },
+
   perpetua: {
     filter: {
       opacity: '50',
@@ -235,6 +227,7 @@ const presetFilters = {
       },
     },
   },
+
   reyes: {
     filter: {
       sepia: '22',
@@ -249,6 +242,7 @@ const presetFilters = {
       color: { a: 1, b: 239, g: 205, r: 173 },
     },
   },
+
   stinson: {
     filter: {
       contrast: '75',
@@ -262,6 +256,7 @@ const presetFilters = {
       color: { a: 0.2, b: 128, g: 149, r: 240 },
     },
   },
+
   toaster: {
     filter: {
       contrast: '150',
@@ -281,6 +276,7 @@ const presetFilters = {
       },
     },
   },
+
   walden: {
     filter: {
       brightness: '110',
@@ -308,6 +304,7 @@ const presetFilters = {
       color: { a: 1, b: 57, g: 3, r: 58 },
     },
   },
+
   xpro2: {
     filter: {
       sepia: '30',
@@ -328,5 +325,4 @@ const presetFilters = {
   },
 };
 
-// module.exports = {presetFilters};
 export default presetFilters;

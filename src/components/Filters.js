@@ -1,8 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import filterDetails from '../filterDetails';
 import Slider from './Slider';
-// import Overlay from './Overlay';
 
 class Filters extends React.Component {
   constructor(props) {
@@ -28,10 +28,15 @@ class Filters extends React.Component {
             />
           );
         })}
-        {/* <Overlay /> */}
       </div>
     );
   }
 }
+
+Filters.propTypes = {
+  resetFilters: PropTypes.func.isRequired,
+  filters: PropTypes.object.isRequired,
+  handleFilterChange: PropTypes.func.isRequired,
+};
 
 export default Filters;

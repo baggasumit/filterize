@@ -1,16 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Credit: https://gist.github.com/hartzis/0b77920380736f98e4f9
 class ImageUpload extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      // file: '',
-      // imagePreviewUrl: '',
-    };
-    // this._handleImageChange = this._handleImageChange.bind(this);
-  }
-
   _handleImageChange = (e) => {
     e.preventDefault();
 
@@ -18,10 +10,6 @@ class ImageUpload extends React.Component {
     let file = e.target.files[0];
 
     reader.onloadend = () => {
-      // this.setState({
-      //   file: file,
-      //   imagePreviewUrl: reader.result,
-      // });
       this.props.updateImage(reader.result);
     };
 
@@ -43,5 +31,9 @@ class ImageUpload extends React.Component {
     );
   }
 }
+
+ImageUpload.propTypes = {
+  updateImage: PropTypes.func.isRequired,
+};
 
 export default ImageUpload;

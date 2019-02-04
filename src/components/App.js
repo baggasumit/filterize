@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-// import filterDetails from '../filterDetails';
 import presetFilters from '../presets';
 
 import Image from './Image';
@@ -43,10 +42,6 @@ class App extends Component {
   };
 
   resetFilters = () => {
-    // const filters = Object.assign({}, this.state.filters);
-    // for (let filter in filters) {
-    //   filters[filter] = filterDetails[filter].default;
-    // }
     this.setState({ filters: defaultFilters, preset: null });
   };
 
