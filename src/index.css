@@ -163,11 +163,19 @@ button:active {
   transform: scale(0.97);
 }
 
-.imageOptions {
+.image-options {
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
-  /* justify-content: space-between; */
+}
+
+.image-options-buttons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.button-upload {
+  margin-right: 1rem;
 }
 
 input[type='file'] {

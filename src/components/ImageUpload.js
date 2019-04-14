@@ -18,7 +18,7 @@ class ImageUpload extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div className="button-upload">
         <label htmlFor="file-upload" className="custom-file-upload">
           Upload Image
         </label>
@@ -27,7 +27,7 @@ class ImageUpload extends React.Component {
           type="file"
           onChange={this._handleImageChange}
         />
-      </React.Fragment>
+      </div>
     );
   }
 }

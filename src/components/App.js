@@ -45,14 +45,6 @@ class App extends Component {
     this.setState({ filters: defaultFilters, preset: null });
   };
 
-  mouseEnterOnImage = () => {
-    this.resetFilters();
-  };
-
-  mouseLeaveFromImage = () => {
-    return;
-  };
-
   handleSelectPreset = (preset) => {
     const selectedPresetFilters = presetFilters[preset].filter;
     this.setState({
@@ -69,8 +61,6 @@ class App extends Component {
           filters={filters}
           imageSource={imageSource}
           updateImageSource={this.updateImageSource}
-          mouseEnter={this.mouseEnterOnImage}
-          mouseLeave={this.mouseLeaveFromImage}
           preset={preset}
         />
 

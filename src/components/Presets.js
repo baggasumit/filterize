@@ -1,16 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import tree from '../images/Tree.jpg';
 import presetFilters from '../presets';
 
 class Presets extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      showOriginal: false,
-      showOriginalOnHover: true,
-      imageSource: tree,
-    };
+    this.state = {};
   }
 
   render() {
