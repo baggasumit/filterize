@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 
 import filterDetails from '../filterDetails';
 import ImageUpload from './ImageUpload';
+import download from '../util/downloadImage';
 
 class Image extends React.Component {
   constructor(props) {
     super(props);
+    this.imageNode = React.createRef();
+    this.figureNode = React.createRef();
     this.state = {
       showOriginal: false,
       showOriginalOnHover: true,
@@ -30,6 +33,12 @@ class Image extends React.Component {
   handleHoverCheck = () => {
     const { showOriginalOnHover } = this.state;
     this.setState({ showOriginalOnHover: !showOriginalOnHover });
+  };
+
+  downloadImage = () => {
+    // console.log('Figure:', this.figureNode);
+    const filter = getComputedStyle(this.figureNode.current).filter;
+    download(this.imageNode.current, filter);
   };
 
   render() {
@@ -57,16 +66,21 @@ class Image extends React.Component {
         <figure
           className={showOriginal ? null : preset}
           style={showOriginal ? null : imageStyle}
+          ref={this.figureNode}
         >
           <img
             src={imageSource}
             alt=""
+            ref={this.imageNode}
             onMouseEnter={this.mouseEnter}
             onMouseLeave={this.mouseLeave}
           />
         </figure>
-        <div className="imageOptions">
-          <ImageUpload updateImage={this.props.updateImageSource} />
+        <div className="image-options">
+          <div className="image-options-buttons">
+            <ImageUpload updateImage={this.props.updateImageSource} />
+            <button onClick={this.downloadImage}>Download</button>
+          </div>
           <div className="hoverCheck">
             <input
               type="checkbox"
@@ -88,8 +102,8 @@ Image.propTypes = {
   filters: PropTypes.object.isRequired,
   imageSource: PropTypes.string.isRequired,
   updateImageSource: PropTypes.func.isRequired,
-  mouseEnter: PropTypes.func.isRequired,
-  mouseLeave: PropTypes.func.isRequired,
+  // mouseEnter: PropTypes.func.isRequired,
+  // mouseLeave: PropTypes.func.isRequired,
   preset: PropTypes.string,
 };
 
